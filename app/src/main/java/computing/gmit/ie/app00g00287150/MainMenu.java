@@ -18,7 +18,6 @@ public class MainMenu extends ActionBarActivity {
         Button viewBtn = (Button) findViewById(R.id.btnView);
         viewBtn.setOnClickListener(new View.OnClickListener()
         {
-            @Override
             public void onClick(View v)
             {
                 Intent in = new Intent(MainMenu.this, ViewTree.class);//class I'm in, Class I want to go to

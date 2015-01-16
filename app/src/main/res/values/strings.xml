@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">App.OO.G00287150</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Marine Data</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_menu_activity">menu_activity</string>
     <string name="title_activity_main_menu">main_menu</string>
     <string name="title_activity_add">AddActivity</string>
-    <string name="tap">Tap the image to open the camera!!</string>
     <string name="title_activity_view_tree">ViewTree</string>
 
 </resources>

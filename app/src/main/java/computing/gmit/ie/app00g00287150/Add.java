@@ -1,9 +1,12 @@
 package computing.gmit.ie.app00g00287150;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class Add extends ActionBarActivity {
@@ -12,6 +15,27 @@ public class Add extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+
+        Button cancelBtn = (Button) findViewById(R.id.btnCancel);
+        cancelBtn.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                Intent in = new Intent(Add.this, ViewTree.class);//class I'm in, Class I want to go to
+                startActivity(in);
+            }
+        });
+
+        Button saveBtn = (Button) findViewById(R.id.btnSave);
+        saveBtn.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                Intent in = new Intent(Add.this, ViewTree.class);//class I'm in, Class I want to go to
+                startActivity(in);
+            }
+        });
+
     }
 
 
