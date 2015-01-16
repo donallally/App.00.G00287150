@@ -67,7 +67,7 @@ public class ViewTree extends Activity {
                 button.setId(i);
                 final int buttonID = button.getId();
 
-                RelativeLayout layout = (RelativeLayout) findViewById(R.id.dyn_layout);
+                LinearLayout layout = (LinearLayout) findViewById(R.id.dyn_layout);
                 layout.addView(button);
 
                 button.setOnClickListener(new View.OnClickListener() {
@@ -77,27 +77,28 @@ public class ViewTree extends Activity {
                 });
             }
         }
+        Button saveBtn = (Button) findViewById(R.id.add);
+        saveBtn.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                Intent in = new Intent(ViewTree.this, Add.class);//class I'm in, Class I want to go to
+                startActivity(in);
+            }
+        });
+
+
     }
 
     public void refreshScreen(Node node){
         setContentView(R.layout.activity_view_tree);
-        LinearLayout buttons = (LinearLayout) findViewById(R.id.dynamicBtns);
+        LinearLayout buttons = (LinearLayout) findViewById(R.id.dyn_layout);
         Button backBtn = (Button) findViewById(R.id.back);
         backBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
                 if(currentNode.getParent() != null){
                     refreshScreen(currentNode.getParent());
                 }
-            }
-        });
-        Button viewBtn = (Button) findViewById(R.id.btnView);
-        viewBtn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent in = new Intent(ViewTree.this, Add.class);//class I'm in, Class I want to go to
-                startActivity(in);
             }
         });
         currentNode = node;

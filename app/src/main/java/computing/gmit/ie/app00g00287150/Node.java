@@ -7,12 +7,11 @@ import java.util.*;
 public class Node {
 
     private String name;
+    private String creator;
     private Node parent;
     private Image image = null;
     private String coordX;
     private String coordY;
-
-
 
     private static final long serialVersionUID = 777L;
     private List <Node> children = new ArrayList<Node>();

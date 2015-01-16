@@ -8,10 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-
 public class Add extends ActionBarActivity {
 
-    @Override
+    public String newName;
+    public String newBoat;
+    public String newCreator;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
@@ -38,8 +40,6 @@ public class Add extends ActionBarActivity {
 
     }
 
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_add, menu);
